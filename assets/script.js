@@ -17,15 +17,23 @@ var lowerChars = upperChars.toLowerCase();
 function validateChoices() { //Prompts user choice to determine if they would like special characters, uppercase characters, and numbers to be added to the password
   if (confirm("Would you like to include special characters?")) {
     boolSpecial = true;
+  } else {
+    boolSpecial = false;
   }
   if (confirm("Would you like to include uppercase characters?")) {
     boolUpper = true;
+  } else {
+    boolUpper = false;
   }
   if (confirm("Would you like to include lowercase characters?")) {
     boolLower = true;
+  } else {
+    boolLower = false;
   }
   if (confirm("Would you like to include number characters?")) {
     boolNumbers = true;
+  } else {
+    boolNumbers = false;
   }
 
   if( !(boolNumbers || boolSpecial || boolUpper || boolLower) ) {
